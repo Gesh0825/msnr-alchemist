@@ -216,8 +216,7 @@ def notify(text):
 def main():
     m = fetch_m15()
     data = scan(m)
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/data.json", "w") as f:
+      with open(data.json", "w") as f:
         json.dump(data, f, indent=1)
     print(f"{data['bar_time']}  price {data['price']}  "
           f"setups {len(data['setups'])}  new {len(data['new'])}")
