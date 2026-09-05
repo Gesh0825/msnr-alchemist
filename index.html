@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1116">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.png">
+<title>MSNR Alchemist</title>
+<style>
+  :root{--bg:#0e1116;--card:#161b22;--line:#232a35;--txt:#e6edf3;--dim:#8b98a8;
+        --buy:#2ea36f;--sell:#d4553f;--amber:#c9861a}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font:15px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+       padding:max(12px,env(safe-area-inset-top)) 12px max(24px,env(safe-area-inset-bottom))}
+  h1{font-size:15px;font-weight:600;margin:0;letter-spacing:.3px}
+  .top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+  .px{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+  .sub{color:var(--dim);font-size:12px}
+  .warn{background:#2a1f10;border:1px solid #4a3417;color:#e3b872;padding:9px 11px;
+        border-radius:9px;font-size:12.5px;margin-bottom:14px}
+  h2{font-size:11px;font-weight:600;letter-spacing:.9px;text-transform:uppercase;
+     color:var(--dim);margin:20px 0 8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;
+        padding:12px;margin-bottom:9px}
+  .card.buy{border-left:3px solid var(--buy)} .card.sell{border-left:3px solid var(--sell)}
+  .side{font-weight:600;font-size:15px} .buy .side{color:var(--buy)} .sell .side{color:var(--sell)}
+  .kind{color:var(--dim);font-size:12px;margin-top:1px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:11px}
+  .g b{display:block;font-size:10px;color:var(--dim);font-weight:500;letter-spacing:.5px;
+       text-transform:uppercase;margin-bottom:2px}
+  .g span{font-variant-numeric:tabular-nums;font-size:14px}
+  .lv{display:flex;justify-content:space-between;align-items:center;padding:8px 11px;
+      border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+  .lv:last-child{border-bottom:0}
+  .tag{font-size:10px;padding:2px 6px;border-radius:4px;border:1px solid var(--line);color:var(--dim)}
+  .up{color:var(--sell)} .dn{color:var(--buy)}
+  button{width:100%;background:var(--card);color:var(--txt);border:1px solid var(--line);
+         border-radius:10px;padding:13px;font-size:14px;font-weight:500;margin-top:8px}
+  .note{color:var(--dim);font-size:11.5px;margin-top:10px;line-height:1.5}
+  pre{background:#0b0e13;border:1px solid var(--line);border-radius:8px;padding:10px;
+      font-size:10px;overflow-x:auto;color:var(--dim);white-space:pre-wrap;word-break:break-all}
+</style>
+</head>
+<body>
+<div class="top">
+  <div><h1>MSNR &middot; ALCHEMIST</h1><div class="sub" id="stamp">loading…</div></div>
+  <div class="px" id="price">—</div>
+</div>
+
+<div class="warn">
+  Levels and setups only. No win rate or P&amp;L is shown here because none was
+  demonstrated — every stop/target pair tested came out flat or negative.
+  Treat these as places to look, not instructions.
+</div>
+
+<h2>Live setups</h2>
+<div id="setups"></div>
+
+<h2>Levels to watch</h2>
+<div class="card" style="padding:0" id="levels"></div>
+
+<h2>Alerts</h2>
+<button id="sub">Enable push alerts on this iPhone</button>
+<div class="note" id="note">
+  iPhone needs this page added to the Home Screen first: Share → Add to Home Screen,
+  then open it from the icon and press the button.
+</div>
+<pre id="out" hidden></pre>
+
+<script>
+const VAPID_PUBLIC = "REPLACE_WITH_YOUR_VAPID_PUBLIC_KEY";
+
+function ago(iso){
+  const s=(Date.now()-new Date(iso.replace(' ','T')+'Z').getTime())/1000;
+  if(s<90) return Math.round(s)+"s ago";
+  if(s<5400) return Math.round(s/60)+"m ago";
+  return Math.round(s/3600)+"h ago";
+}
+function card(s){
+  const c=s.side==="BUY"?"buy":"sell";
+  return `<div class="card ${c}">
+    <div class="side">${s.side} LIMIT ${s.entry.toFixed(2)}</div>
+    <div class="kind">${s.type}</div>
+    <div class="grid">
+      <div class="g"><b>Entry</b><span>${s.entry.toFixed(2)}</span></div>
+      <div class="g"><b>SL</b><span>${s.sl.toFixed(2)}</span></div>
+      <div class="g"><b>TP</b><span>${s.tp.toFixed(2)}</span></div>
+      <div class="g"><b>Lots</b><span>${s.lots.toFixed(2)}</span></div>
+    </div></div>`;
+}
+function lvl(l){
+  const d=l.dist>=0?"up":"dn";
+  return `<div class="lv"><span><span class="tag">${l.kind}</span> &nbsp;${l.price.toFixed(2)}</span>
+    <span class="${d}">${l.dist>=0?"+":""}${l.dist.toFixed(2)}</span></div>`;
+}
+async function load(){
+  try{
+    const r=await fetch("data.json?"+Date.now(),{cache:"no-store"});
+    const d=await r.json();
+    document.getElementById("price").textContent=d.price.toFixed(2);
+    document.getElementById("stamp").textContent =
+      d.market_closed ? d.symbol+" · market closed · last bar "+ago(d.bar_time)
+                      : d.symbol+" · M15 · bar "+ago(d.bar_time);
+    document.getElementById("stamp").style.color = d.market_closed ? "#c9861a" : "";
+    document.getElementById("setups").innerHTML =
+      d.setups.length ? d.setups.slice().reverse().map(card).join("")
+                      : `<div class="card"><span class="sub">No live setup. Waiting for an H1 OCL with a 15m SBR or RBS on it.</span></div>`;
+    document.getElementById("levels").innerHTML = d.levels.map(lvl).join("");
+  }catch(e){
+    document.getElementById("stamp").textContent="could not load data.json";
+  }
+}
+load(); setInterval(load, 60000);
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) load(); });
+
+function b64(s){
+  const p="=".repeat((4-s.length%4)%4);
+  const b=atob((s+p).replace(/-/g,"+").replace(/_/g,"/"));
+  return Uint8Array.from([...b].map(c=>c.charCodeAt(0)));
+}
+document.getElementById("sub").onclick=async()=>{
+  const note=document.getElementById("note");
+  if(!("serviceWorker" in navigator)||!("PushManager" in window)){
+    note.textContent="This browser can't do push. On iPhone you must open it from the Home Screen icon."; return;
+  }
+  try{
+    const perm=await Notification.requestPermission();
+    if(perm!=="granted"){ note.textContent="Notifications were not allowed."; return; }
+    const reg=await navigator.serviceWorker.register("sw.js");
+    await navigator.serviceWorker.ready;
+    const s=await reg.pushManager.subscribe({userVisibleOnly:true,
+              applicationServerKey:b64(VAPID_PUBLIC)});
+    const o=document.getElementById("out");
+    o.hidden=false; o.textContent=JSON.stringify(s);
+    note.textContent="Copy the block below and save it as the GitHub secret PUSH_SUBSCRIPTION.";
+  }catch(e){ note.textContent="Subscribe failed: "+e.message; }
+};
+</script>
+</body>
+</html>
