@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
+    inputs:
+      test_alert:
+        description: 'Send a test alert (ignores market hours)'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -25,6 +30,7 @@ jobs:
           PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
           VAPID_EMAIL:       ${{ secrets.VAPID_EMAIL }}
+          MSNR_TEST_ALERT:   ${{ inputs.test_alert }}
           MSNR_RISK:         "100"
           MSNR_SL:           "3"
           MSNR_TP:           "6"
