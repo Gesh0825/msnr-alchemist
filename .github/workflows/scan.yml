@@ -1,0 +1,40 @@
+name: MSNR scan
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: msnr-scan
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pywebpush
+      - name: Scan
+        env:
+          TWELVEDATA_KEY:    ${{ secrets.TWELVEDATA_KEY }}
+          TELEGRAM_TOKEN:    ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID:  ${{ secrets.TELEGRAM_CHAT_ID }}
+          PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          VAPID_EMAIL:       ${{ secrets.VAPID_EMAIL }}
+          MSNR_RISK:         "100"
+          MSNR_SL:           "3"
+          MSNR_TP:           "6"
+          MSNR_ALERT_DIST:   "5"
+          MSNR_KEEP:         "80"
+        run: python scan.py
+      - name: Publish
+        run: |
+          git config user.name  "msnr-bot"
+          git config user.email "msnr-bot@users.noreply.github.com"
+          git add docs/data.json
+          git diff --staged --quiet || git commit -m "scan $(date -u +%FT%TZ)"
+          git push
