@@ -190,16 +190,28 @@ def levels_near(sup, res, live, price):
 
 # ---------------------------------------------------------------- notify
 def notify(text):
+    sent = False
     tok = os.environ.get("TELEGRAM_TOKEN", "")
     cid = os.environ.get("TELEGRAM_CHAT_ID", "")
     if tok and cid:
         body = urllib.parse.urlencode({"chat_id": cid, "text": text}).encode()
         try:
-            urllib.request.urlopen(
-                f"https://api.telegram.org/bot{tok}/sendMessage", data=body, timeout=20).read()
-            print("telegram sent")
+            r = urllib.request.urlopen(
+                f"https://api.telegram.org/bot{tok}/sendMessage", data=body, timeout=20)
+            j = json.loads(r.read().decode())
+            if j.get("ok"):
+                print("telegram: sent")
+                sent = True
+            else:
+                print("telegram: REFUSED ->", j.get("description", j))
+        except urllib.error.HTTPError as e:
+            try:    d = json.loads(e.read().decode()).get("description", "")
+            except Exception: d = ""
+            print(f"telegram: HTTP {e.code} -> {d}")
         except Exception as e:
-            print("telegram failed:", e)
+            print("telegram: failed ->", e)
+    else:
+        print("telegram: skipped - TELEGRAM_TOKEN or TELEGRAM_CHAT_ID is not set")
     sub = os.environ.get("PUSH_SUBSCRIPTION", "")
     vap = os.environ.get("VAPID_PRIVATE_KEY", "")
     if sub and vap:
@@ -209,9 +221,11 @@ def notify(text):
                     data=json.dumps({"title": "MSNR signal", "body": text}),
                     vapid_private_key=vap,
                     vapid_claims={"sub": os.environ.get("VAPID_EMAIL", "mailto:none@example.com")})
-            print("web push sent")
+            print("web push: sent")
+            sent = True
         except Exception as e:
-            print("web push failed:", e)
+            print("web push: failed ->", e)
+    return sent
 
 def main():
     m = fetch_m15()
@@ -220,6 +234,11 @@ def main():
         json.dump(data, f, indent=1)
     print(f"{data['bar_time']}  price {data['price']}  "
           f"setups {len(data['setups'])}  new {len(data['new'])}")
+    if os.environ.get("MSNR_TEST_ALERT", "").lower() == "true":
+        ok = notify(f"MSNR test alert - the chain works.\n"
+                    f"{data['symbol']} {data['price']}  ({len(data['setups'])} setups on the board)")
+        print("TEST ALERT DELIVERED" if ok else "TEST ALERT NOT DELIVERED - see the line above")
+        return
     if data["market_closed"]:
         print(f"market looks shut - newest bar is {data['bar_age_min']:.0f} min old. No alerts.")
         return
