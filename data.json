@@ -1,10 +1,10 @@
 {
  "symbol": "XAU/USD",
- "price": 4354.22,
- "bar_time": "2026-09-08 23:00:00",
- "bar_age_min": 25.1,
+ "price": 4366.28,
+ "bar_time": "2026-09-09 01:00:00",
+ "bar_age_min": 24.2,
  "market_closed": false,
- "generated": "2026-09-08 23:25:05Z",
+ "generated": "2026-09-09 01:24:13Z",
  "setups": [
   {
    "side": "SELL",
@@ -93,61 +93,97 @@
    "price": 4404.44,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 50.22
+   "dist": 38.16
   },
   {
    "price": 4393.51,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 39.29
+   "dist": 27.23
   },
   {
    "price": 4393.15,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 38.93
+   "dist": 26.87
+  },
+  {
+   "price": 4392.99,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 26.71
   },
   {
    "price": 4389.87,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 35.65
+   "dist": 23.59
   },
   {
    "price": 4386.53,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 32.31
+   "dist": 20.25
   },
   {
    "price": 4382.71,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 28.49
+   "dist": 16.43
   },
   {
    "price": 4373.43,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 19.21
+   "dist": 7.15
   },
   {
    "price": 4369.1,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 14.88
+   "dist": 2.82
   },
   {
    "price": 4363.03,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 8.81
+   "dist": -3.25
+  },
+  {
+   "price": 4358.96,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -7.32
+  },
+  {
+   "price": 4356.95,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -9.33
   },
   {
    "price": 4355.61,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 1.39
+   "kind": "RBS",
+   "side": "support",
+   "dist": -10.67
+  },
+  {
+   "price": 4352.6,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -13.68
+  },
+  {
+   "price": 4352.25,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -14.03
+  },
+  {
+   "price": 4350.2,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -16.08
   }
  ],
  "params": {
