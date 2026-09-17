@@ -1,31 +1,11 @@
 {
  "symbol": "XAU/USD",
- "price": 4350.86,
- "bar_time": "2026-09-17 19:00:00",
- "bar_age_min": 19.5,
+ "price": 4342.38,
+ "bar_time": "2026-09-17 22:00:00",
+ "bar_age_min": 21.9,
  "market_closed": false,
- "generated": "2026-09-17 19:19:32Z",
+ "generated": "2026-09-17 22:21:52Z",
  "setups": [
-  {
-   "side": "SELL",
-   "type": "SBR retest at H1 OCL",
-   "entry": 4330.13,
-   "sl": 4333.13,
-   "tp": 4324.13,
-   "lots": 0.33,
-   "time": "2026-09-17 08:00:00",
-   "dist_at_arm": 11.62
-  },
-  {
-   "side": "BUY",
-   "type": "RBS retest at H1 OCL",
-   "entry": 4347.23,
-   "sl": 4344.23,
-   "tp": 4353.23,
-   "lots": 0.33,
-   "time": "2026-09-17 12:15:00",
-   "dist_at_arm": 32.59
-  },
   {
    "side": "BUY",
    "type": "RBS retest at H1 OCL",
@@ -85,105 +65,125 @@
    "lots": 0.33,
    "time": "2026-09-17 18:30:00",
    "dist_at_arm": 6.52
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 4351.83,
+   "sl": 4354.83,
+   "tp": 4345.83,
+   "lots": 0.33,
+   "time": "2026-09-17 19:30:00",
+   "dist_at_arm": 6.58
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 4348.77,
+   "sl": 4351.77,
+   "tp": 4342.77,
+   "lots": 0.33,
+   "time": "2026-09-17 20:45:00",
+   "dist_at_arm": 6.87
   }
  ],
  "new": [],
  "levels": [
   {
-   "price": 4363.14,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 12.28
-  },
-  {
-   "price": 4362.98,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 12.12
-  },
-  {
-   "price": 4360.77,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 9.91
-  },
-  {
-   "price": 4360.49,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 9.63
-  },
-  {
-   "price": 4360.05,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 9.19
-  },
-  {
-   "price": 4359.69,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 8.83
-  },
-  {
    "price": 4353.98,
-   "kind": "RBS",
-   "side": "support",
-   "dist": 3.12
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 11.6
   },
   {
-   "price": 4353.59,
-   "kind": "RBS",
-   "side": "support",
-   "dist": 2.73
-  },
-  {
-   "price": 4352.65,
-   "kind": "RBS",
-   "side": "support",
-   "dist": 1.79
-  },
-  {
-   "price": 4350.8,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -0.06
-  },
-  {
-   "price": 4348.99,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -1.87
+   "price": 4348.77,
+   "kind": "OCL 1H",
+   "side": "resistance",
+   "dist": 6.39
   },
   {
    "price": 4348.73,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": -2.13
+   "dist": 6.35
   },
   {
-   "price": 4326.47,
+   "price": 4348.31,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 5.93
+  },
+  {
+   "price": 4347.18,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 4.8
+  },
+  {
+   "price": 4346.49,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 4.11
+  },
+  {
+   "price": 4346.28,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 3.9
+  },
+  {
+   "price": 4344.99,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 2.61
+  },
+  {
+   "price": 4344.65,
    "kind": "RBS",
    "side": "support",
-   "dist": -24.39
+   "dist": 2.27
+  },
+  {
+   "price": 4344.2,
+   "kind": "RBS",
+   "side": "support",
+   "dist": 1.82
+  },
+  {
+   "price": 4343.64,
+   "kind": "RBS",
+   "side": "support",
+   "dist": 1.26
+  },
+  {
+   "price": 4342.74,
+   "kind": "RBS",
+   "side": "support",
+   "dist": 0.36
+  },
+  {
+   "price": 4342.69,
+   "kind": "RBS",
+   "side": "support",
+   "dist": 0.31
+  },
+  {
+   "price": 4342.68,
+   "kind": "RBS",
+   "side": "support",
+   "dist": 0.3
+  },
+  {
+   "price": 4341.9,
+   "kind": "OCL 1H",
+   "side": "resistance",
+   "dist": -0.48
   },
   {
    "price": 4310.24,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": -40.62
-  },
-  {
-   "price": 4303.14,
-   "kind": "OCL 1H",
-   "side": "support",
-   "dist": -47.72
-  },
-  {
-   "price": 4297.62,
-   "kind": "OCL 1H",
-   "side": "support",
-   "dist": -53.24
+   "dist": -32.14
   }
  ],
  "params": {
