@@ -2,9 +2,9 @@
  "symbol": "XAU/USD",
  "price": 4377.25,
  "bar_time": "2026-09-18 20:30:00",
- "bar_age_min": 841.9,
+ "bar_age_min": 1049.4,
  "market_closed": true,
- "generated": "2026-09-19 10:31:53Z",
+ "generated": "2026-09-19 13:59:26Z",
  "setups": [
   {
    "side": "SELL",
