@@ -1,10 +1,10 @@
 {
  "symbol": "XAU/USD",
- "price": 4285.98,
- "bar_time": "2026-09-23 16:45:00",
- "bar_age_min": 16.8,
+ "price": 4282.82,
+ "bar_time": "2026-09-23 20:00:00",
+ "bar_age_min": 23.6,
  "market_closed": false,
- "generated": "2026-09-23 17:01:50Z",
+ "generated": "2026-09-23 20:23:38Z",
  "setups": [
   {
    "side": "SELL",
@@ -93,61 +93,73 @@
    "price": 4331.37,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 45.39
+   "dist": 48.55
   },
   {
    "price": 4320.27,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 34.29
+   "dist": 37.45
   },
   {
    "price": 4319.49,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 33.51
+   "dist": 36.67
   },
   {
    "price": 4315.06,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 29.08
-  },
-  {
-   "price": 4314.35,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 28.37
+   "dist": 32.24
   },
   {
    "price": 4305.77,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 19.79
+   "dist": 22.95
   },
   {
    "price": 4305.77,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 19.79
+   "dist": 22.95
   },
   {
    "price": 4305.33,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 19.35
+   "dist": 22.51
   },
   {
    "price": 4303.3,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 17.32
+   "dist": 20.48
   },
   {
    "price": 4302.04,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 16.06
+   "dist": 19.22
+  },
+  {
+   "price": 4287.12,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 4.3
+  },
+  {
+   "price": 4285.34,
+   "kind": "RBS",
+   "side": "support",
+   "dist": 2.52
+  },
+  {
+   "price": 4282.25,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -0.57
   }
  ],
  "params": {
