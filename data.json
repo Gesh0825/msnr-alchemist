@@ -1,21 +1,11 @@
 {
  "symbol": "XAU/USD",
- "price": 4131.07,
- "bar_time": "2026-09-29 01:45:00",
- "bar_age_min": 29.5,
+ "price": 4140.01,
+ "bar_time": "2026-09-29 08:15:00",
+ "bar_age_min": 25.6,
  "market_closed": false,
- "generated": "2026-09-29 02:14:28Z",
+ "generated": "2026-09-29 08:40:37Z",
  "setups": [
-  {
-   "side": "SELL",
-   "type": "SBR retest at H1 OCL",
-   "entry": 4270.82,
-   "sl": 4273.82,
-   "tp": 4264.82,
-   "lots": 0.33,
-   "time": "2026-09-28 06:00:00",
-   "dist_at_arm": 91.46
-  },
   {
    "side": "SELL",
    "type": "SBR retest at H1 OCL",
@@ -35,105 +25,125 @@
    "lots": 0.33,
    "time": "2026-09-29 01:45:00",
    "dist_at_arm": 6.94
+  },
+  {
+   "side": "BUY",
+   "type": "RBS retest at H1 OCL",
+   "entry": 4134.76,
+   "sl": 4131.76,
+   "tp": 4140.76,
+   "lots": 0.33,
+   "time": "2026-09-29 02:45:00",
+   "dist_at_arm": 4.39
+  },
+  {
+   "side": "BUY",
+   "type": "RBS retest at H1 OCL",
+   "entry": 4139.58,
+   "sl": 4136.58,
+   "tp": 4145.58,
+   "lots": 0.33,
+   "time": "2026-09-29 07:45:00",
+   "dist_at_arm": 0.94
   }
  ],
  "new": [],
  "levels": [
   {
-   "price": 4151.7,
-   "kind": "OCL 1H",
-   "side": "resistance",
-   "dist": 20.63
-  },
-  {
-   "price": 4146.19,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 15.12
-  },
-  {
-   "price": 4144.42,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 13.35
-  },
-  {
-   "price": 4144.02,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 12.95
-  },
-  {
-   "price": 4142.67,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 11.6
-  },
-  {
-   "price": 4137.67,
+   "price": 4146.61,
    "kind": "SBR",
    "side": "resistance",
    "dist": 6.6
   },
   {
-   "price": 4135.98,
+   "price": 4146.19,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 4.91
+   "dist": 6.18
   },
   {
-   "price": 4135.04,
+   "price": 4145.15,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 5.14
+  },
+  {
+   "price": 4144.42,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 4.41
+  },
+  {
+   "price": 4142.67,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 2.66
+  },
+  {
+   "price": 4142.29,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 2.28
+  },
+  {
+   "price": 4140.21,
    "kind": "RBS",
    "side": "support",
-   "dist": 3.97
+   "dist": 0.2
+  },
+  {
+   "price": 4139.58,
+   "kind": "OCL 1H",
+   "side": "support",
+   "dist": -0.43
+  },
+  {
+   "price": 4139.15,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -0.86
+  },
+  {
+   "price": 4139.0,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -1.01
+  },
+  {
+   "price": 4137.67,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -2.34
   },
   {
    "price": 4134.76,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": 3.69
-  },
-  {
-   "price": 4134.6,
-   "kind": "RBS",
-   "side": "support",
-   "dist": 3.53
+   "dist": -5.25
   },
   {
    "price": 4132.71,
    "kind": "RBS",
    "side": "support",
-   "dist": 1.64
+   "dist": -7.3
+  },
+  {
+   "price": 4132.24,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -7.77
   },
   {
    "price": 4128.94,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": -2.13
-  },
-  {
-   "price": 4128.36,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -2.71
-  },
-  {
-   "price": 4126.28,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -4.79
-  },
-  {
-   "price": 4125.0,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -6.07
+   "dist": -11.07
   },
   {
    "price": 4115.08,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": -15.99
+   "dist": -24.93
   }
  ],
  "params": {
