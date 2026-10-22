@@ -1,21 +1,11 @@
 {
  "symbol": "XAU/USD",
- "price": 4053.96,
- "bar_time": "2026-10-22 15:30:00",
- "bar_age_min": 28.7,
+ "price": 4027.03,
+ "bar_time": "2026-10-22 19:30:00",
+ "bar_age_min": 27.8,
  "market_closed": false,
- "generated": "2026-10-22 15:58:40Z",
+ "generated": "2026-10-22 19:57:46Z",
  "setups": [
-  {
-   "side": "SELL",
-   "type": "SBR retest at H1 OCL",
-   "entry": 4141.93,
-   "sl": 4144.93,
-   "tp": 4135.93,
-   "lots": 0.33,
-   "time": "2026-10-21 17:00:00",
-   "dist_at_arm": 9.88
-  },
   {
    "side": "BUY",
    "type": "RBS retest at H1 OCL",
@@ -93,61 +83,61 @@
    "price": 4131.91,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 77.95
+   "dist": 104.88
   },
   {
    "price": 4131.14,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 77.18
+   "dist": 104.11
   },
   {
    "price": 4125.61,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 71.65
+   "dist": 98.58
   },
   {
    "price": 4120.84,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 66.88
-  },
-  {
-   "price": 4083.89,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 29.93
-  },
-  {
-   "price": 4076.13,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 22.17
-  },
-  {
-   "price": 4073.05,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 19.09
-  },
-  {
-   "price": 4065.04,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 11.08
+   "dist": 93.81
   },
   {
    "price": 4062.86,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 8.9
+   "dist": 35.83
   },
   {
    "price": 4057.55,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 3.59
+   "dist": 30.52
+  },
+  {
+   "price": 4050.69,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 23.66
+  },
+  {
+   "price": 4049.47,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 22.44
+  },
+  {
+   "price": 4047.74,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 20.71
+  },
+  {
+   "price": 4037.52,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 10.49
   }
  ],
  "params": {
