@@ -1,10 +1,10 @@
 {
  "symbol": "XAU/USD",
- "price": 3997.63,
- "bar_time": "2026-10-23 20:00:00",
- "bar_age_min": 27.9,
- "market_closed": false,
- "generated": "2026-10-23 20:27:55Z",
+ "price": 3995.78,
+ "bar_time": "2026-10-23 20:30:00",
+ "bar_age_min": 174.5,
+ "market_closed": true,
+ "generated": "2026-10-23 23:24:27Z",
  "setups": [
   {
    "side": "SELL",
@@ -53,73 +53,61 @@
    "price": 4131.91,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 134.28
+   "dist": 136.13
   },
   {
    "price": 4125.61,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 127.98
+   "dist": 129.83
   },
   {
    "price": 4026.14,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 28.51
-  },
-  {
-   "price": 4000.35,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 2.72
-  },
-  {
-   "price": 4000.31,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 2.68
-  },
-  {
-   "price": 4000.3,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 2.67
+   "dist": 30.36
   },
   {
    "price": 4000.3,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 2.67
-  },
-  {
-   "price": 3998.1,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 0.47
-  },
-  {
-   "price": 3997.99,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 0.36
+   "dist": 4.52
   },
   {
    "price": 3997.0,
    "kind": "SBR",
    "side": "resistance",
-   "dist": -0.63
+   "dist": 1.22
+  },
+  {
+   "price": 3996.94,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 1.16
+  },
+  {
+   "price": 3996.66,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 0.88
   },
   {
    "price": 3995.18,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -2.45
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": -0.6
   },
   {
    "price": 3994.9,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -2.73
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": -0.88
+  },
+  {
+   "price": 3993.67,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": -2.11
   }
  ],
  "params": {
