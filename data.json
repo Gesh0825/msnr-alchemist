@@ -1,21 +1,11 @@
 {
  "symbol": "XAU/USD",
- "price": 4010.57,
- "bar_time": "2026-10-27 05:15:00",
- "bar_age_min": 26.7,
+ "price": 4010.71,
+ "bar_time": "2026-10-27 10:45:00",
+ "bar_age_min": 17.7,
  "market_closed": false,
- "generated": "2026-10-27 05:41:41Z",
+ "generated": "2026-10-27 11:02:44Z",
  "setups": [
-  {
-   "side": "BUY",
-   "type": "RBS retest at H1 OCL",
-   "entry": 4008.51,
-   "sl": 4005.51,
-   "tp": 4014.51,
-   "lots": 0.33,
-   "time": "2026-10-26 08:00:00",
-   "dist_at_arm": 6.01
-  },
   {
    "side": "SELL",
    "type": "SBR retest at H1 OCL",
@@ -45,6 +35,46 @@
    "lots": 0.33,
    "time": "2026-10-27 04:15:00",
    "dist_at_arm": 3.34
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 4010.88,
+   "sl": 4013.88,
+   "tp": 4004.88,
+   "lots": 0.33,
+   "time": "2026-10-27 06:45:00",
+   "dist_at_arm": 10.0
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 4000.3,
+   "sl": 4003.3,
+   "tp": 3994.3,
+   "lots": 0.33,
+   "time": "2026-10-27 08:30:00",
+   "dist_at_arm": 7.65
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 4000.88,
+   "sl": 4003.88,
+   "tp": 3994.88,
+   "lots": 0.33,
+   "time": "2026-10-27 08:30:00",
+   "dist_at_arm": 8.23
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 3997.6,
+   "sl": 4000.6,
+   "tp": 3991.6,
+   "lots": 0.33,
+   "time": "2026-10-27 08:45:00",
+   "dist_at_arm": 4.08
   }
  ],
  "new": [],
@@ -53,97 +83,97 @@
    "price": 4017.27,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": 6.7
+   "dist": 6.56
+  },
+  {
+   "price": 4012.44,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 1.73
+  },
+  {
+   "price": 4012.36,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 1.65
+  },
+  {
+   "price": 4011.56,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 0.85
+  },
+  {
+   "price": 4011.38,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 0.67
+  },
+  {
+   "price": 4011.37,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 0.66
+  },
+  {
+   "price": 4010.88,
+   "kind": "OCL 1H",
+   "side": "resistance",
+   "dist": 0.17
   },
   {
    "price": 4010.82,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 0.25
+   "dist": 0.11
   },
   {
-   "price": 4010.24,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": -0.33
-  },
-  {
-   "price": 4010.2,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": -0.37
-  },
-  {
-   "price": 4008.51,
-   "kind": "OCL 1H",
+   "price": 4002.78,
+   "kind": "RBS",
    "side": "support",
-   "dist": -2.06
+   "dist": -7.93
   },
   {
-   "price": 4008.05,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": -2.52
+   "price": 4002.34,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -8.37
   },
   {
-   "price": 4008.0,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": -2.57
+   "price": 4001.87,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -8.84
   },
   {
-   "price": 4006.13,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": -4.44
+   "price": 4001.25,
+   "kind": "RBS",
+   "side": "support",
+   "dist": -9.46
   },
   {
    "price": 4000.88,
    "kind": "RBS",
    "side": "support",
-   "dist": -9.69
+   "dist": -9.83
   },
   {
-   "price": 4000.35,
+   "price": 4000.88,
    "kind": "RBS",
    "side": "support",
-   "dist": -10.22
+   "dist": -9.83
   },
   {
-   "price": 4000.31,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -10.26
-  },
-  {
-   "price": 4000.3,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -10.27
-  },
-  {
-   "price": 4000.3,
+   "price": 4000.88,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": -10.27
+   "dist": -9.83
   },
   {
-   "price": 3998.4,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -12.17
-  },
-  {
-   "price": 3998.33,
+   "price": 3997.6,
    "kind": "OCL 1H",
-   "side": "support",
-   "dist": -12.24
-  },
-  {
-   "price": 3994.9,
-   "kind": "RBS",
-   "side": "support",
-   "dist": -15.67
+   "side": "resistance",
+   "dist": -13.11
   }
  ],
  "params": {
