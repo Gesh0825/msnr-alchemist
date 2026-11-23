@@ -1,41 +1,11 @@
 {
  "symbol": "XAU/USD",
- "price": 3611.13,
- "bar_time": "2026-11-23 01:00:00",
- "bar_age_min": 27.2,
+ "price": 3613.87,
+ "bar_time": "2026-11-23 09:15:00",
+ "bar_age_min": 25.1,
  "market_closed": false,
- "generated": "2026-11-23 01:27:12Z",
+ "generated": "2026-11-23 09:40:06Z",
  "setups": [
-  {
-   "side": "SELL",
-   "type": "SBR retest at H1 OCL",
-   "entry": 3719.79,
-   "sl": 3722.79,
-   "tp": 3713.79,
-   "lots": 0.33,
-   "time": "2026-11-20 13:45:00",
-   "dist_at_arm": 148.54
-  },
-  {
-   "side": "SELL",
-   "type": "SBR retest at H1 OCL",
-   "entry": 3703.15,
-   "sl": 3706.15,
-   "tp": 3697.15,
-   "lots": 0.33,
-   "time": "2026-11-20 15:45:00",
-   "dist_at_arm": 153.42
-  },
-  {
-   "side": "SELL",
-   "type": "SBR retest at H1 OCL",
-   "entry": 3559.04,
-   "sl": 3562.04,
-   "tp": 3553.04,
-   "lots": 0.33,
-   "time": "2026-11-20 15:45:00",
-   "dist_at_arm": 9.31
-  },
   {
    "side": "SELL",
    "type": "SBR retest at H1 OCL",
@@ -85,105 +55,135 @@
    "lots": 0.33,
    "time": "2026-11-22 22:45:00",
    "dist_at_arm": 126.18
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 3595.67,
+   "sl": 3598.67,
+   "tp": 3589.67,
+   "lots": 0.33,
+   "time": "2026-11-23 02:45:00",
+   "dist_at_arm": 2.22
+  },
+  {
+   "side": "BUY",
+   "type": "RBS retest at H1 OCL",
+   "entry": 3608.52,
+   "sl": 3605.52,
+   "tp": 3614.52,
+   "lots": 0.33,
+   "time": "2026-11-23 05:45:00",
+   "dist_at_arm": 7.79
+  },
+  {
+   "side": "BUY",
+   "type": "RBS retest at H1 OCL",
+   "entry": 3560.64,
+   "sl": 3557.64,
+   "tp": 3566.64,
+   "lots": 0.33,
+   "time": "2026-11-23 09:00:00",
+   "dist_at_arm": 58.48
   }
  ],
  "new": [],
  "levels": [
   {
-   "price": 3674.73,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 63.6
-  },
-  {
-   "price": 3666.87,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 55.74
-  },
-  {
-   "price": 3659.27,
-   "kind": "SBR",
-   "side": "resistance",
-   "dist": 48.14
-  },
-  {
    "price": 3625.16,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 14.03
+   "dist": 11.29
   },
   {
    "price": 3624.99,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 13.86
+   "dist": 11.12
+  },
+  {
+   "price": 3624.4,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 10.53
+  },
+  {
+   "price": 3623.91,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 10.04
+  },
+  {
+   "price": 3623.86,
+   "kind": "SBR",
+   "side": "resistance",
+   "dist": 9.99
   },
   {
    "price": 3623.01,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 11.88
+   "dist": 9.14
   },
   {
-   "price": 3576.24,
+   "price": 3620.08,
    "kind": "RBS",
    "side": "support",
-   "dist": -34.89
+   "dist": 6.21
   },
   {
-   "price": 3575.37,
+   "price": 3619.77,
    "kind": "RBS",
    "side": "support",
-   "dist": -35.76
+   "dist": 5.9
   },
   {
-   "price": 3573.14,
+   "price": 3617.89,
    "kind": "RBS",
    "side": "support",
-   "dist": -37.99
+   "dist": 4.02
   },
   {
-   "price": 3572.31,
+   "price": 3617.54,
    "kind": "RBS",
    "side": "support",
-   "dist": -38.82
+   "dist": 3.67
   },
   {
-   "price": 3571.84,
+   "price": 3616.3,
    "kind": "RBS",
    "side": "support",
-   "dist": -39.29
+   "dist": 2.43
   },
   {
-   "price": 3571.15,
+   "price": 3616.3,
+   "kind": "OCL 1H",
+   "side": "support",
+   "dist": 2.43
+  },
+  {
+   "price": 3611.53,
    "kind": "RBS",
    "side": "support",
-   "dist": -39.98
+   "dist": -2.34
+  },
+  {
+   "price": 3608.52,
+   "kind": "OCL 1H",
+   "side": "support",
+   "dist": -5.35
   },
   {
    "price": 3567.51,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": -43.62
-  },
-  {
-   "price": 3560.64,
-   "kind": "OCL 1H",
-   "side": "support",
-   "dist": -50.49
-  },
-  {
-   "price": 3548.78,
-   "kind": "OCL 1H",
-   "side": "resistance",
-   "dist": -62.35
+   "dist": -46.36
   },
   {
    "price": 3545.31,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": -65.82
+   "dist": -68.56
   }
  ],
  "params": {
