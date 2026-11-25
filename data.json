@@ -1,21 +1,11 @@
 {
  "symbol": "XAU/USD",
- "price": 3571.59,
- "bar_time": "2026-11-24 16:00:00",
- "bar_age_min": 28.8,
+ "price": 3552.35,
+ "bar_time": "2026-11-25 00:30:00",
+ "bar_age_min": 31.2,
  "market_closed": false,
- "generated": "2026-11-24 16:28:50Z",
+ "generated": "2026-11-25 01:01:10Z",
  "setups": [
-  {
-   "side": "SELL",
-   "type": "SBR retest at H1 OCL",
-   "entry": 3642.47,
-   "sl": 3645.47,
-   "tp": 3636.47,
-   "lots": 0.33,
-   "time": "2026-11-24 03:45:00",
-   "dist_at_arm": 9.11
-  },
   {
    "side": "BUY",
    "type": "RBS retest at H1 OCL",
@@ -85,6 +75,16 @@
    "lots": 0.33,
    "time": "2026-11-24 15:30:00",
    "dist_at_arm": 14.02
+  },
+  {
+   "side": "SELL",
+   "type": "SBR retest at H1 OCL",
+   "entry": 3559.04,
+   "sl": 3562.04,
+   "tp": 3553.04,
+   "lots": 0.33,
+   "time": "2026-11-24 23:45:00",
+   "dist_at_arm": 8.68
   }
  ],
  "new": [],
@@ -93,61 +93,61 @@
    "price": 3634.72,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": 63.13
+   "dist": 82.37
   },
   {
    "price": 3633.36,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 61.77
+   "dist": 81.01
   },
   {
    "price": 3626.94,
    "kind": "OCL 1H",
    "side": "support",
-   "dist": 55.35
+   "dist": 74.59
   },
   {
    "price": 3621.96,
    "kind": "OCL 1H",
    "side": "resistance",
-   "dist": 50.37
+   "dist": 69.61
   },
   {
-   "price": 3604.0,
+   "price": 3556.34,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 32.41
+   "dist": 3.99
   },
   {
-   "price": 3582.57,
+   "price": 3556.26,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 10.98
+   "dist": 3.91
   },
   {
-   "price": 3578.94,
+   "price": 3556.18,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 7.35
+   "dist": 3.83
   },
   {
-   "price": 3578.63,
+   "price": 3551.0,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 7.04
+   "dist": -1.35
   },
   {
-   "price": 3577.18,
+   "price": 3550.36,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 5.59
+   "dist": -1.99
   },
   {
-   "price": 3573.14,
+   "price": 3549.34,
    "kind": "SBR",
    "side": "resistance",
-   "dist": 1.55
+   "dist": -3.01
   }
  ],
  "params": {
